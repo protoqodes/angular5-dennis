@@ -1,0 +1,19 @@
+<main>
+	<form action="" #myForm="ngForm" (ngSubmit)="showDetails(myForm)">
+		<input placeholder="name" ngModel type="text" name="name">
+		<input placeholder="age" ngModel type="number" name="age">
+		<input placeholder="address" ngModel type="text" name="address">
+		<select name="birth_month" ngModel (change)="getMonth($event.target.value)">
+			<option>Jan</option>
+			<option>Feb</option>
+			<option>Mar</option>
+			<option>Apr</option>
+			<option>May</option>
+			<option>Jun</option>
+		</select>
+		<button type="submit" >Show</button>
+
+		<input type="number" name="zip_code" (keypress)="theZip($event.target.value)">
+
+	</form>
+</main>
